@@ -40,7 +40,7 @@ body {
     height: 52px;
     object-fit: contain;
     background-color: var(--blanco);
-    border-radius: 50%;
+    border-radius: 10px;
     padding: 3px;
     border: 2px solid var(--amarillo-institucional);
 }
@@ -141,7 +141,7 @@ canvas {
     height: 85px;
     object-fit: contain;
     background-color: var(--blanco);
-    border-radius: 50%;
+    border-radius: 10px;
     padding: 5px;
     border: 3px solid var(--amarillo-institucional);
     margin-bottom: 15px;
@@ -190,4 +190,4 @@ canvas {
     padding: 12px;
     font-size: 0.8rem;
     color: #CCCCCC;
-  }
+    }
