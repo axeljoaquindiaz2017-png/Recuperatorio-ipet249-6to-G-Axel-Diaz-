@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy Tower - IPET N° 249 "Nicolás Copérnico" | Informática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-institucional">
+        <img src="assets/escudo_ipet249.png" alt="Escudo IPET N° 249 Nicolás Copérnico" class="escudo-logo">
+        <div class="titulo-container">
+            <h1>ICY TOWER: EDICIÓN INFORMÁTICA</h1>
+            <p>IPET N° 249 "Nicolás Copérnico" • Laboratorio de Programación - 6° G</p>
+        </div>
+    </header>
+
+    <main class="game-wrapper">
+        <div class="hud-panel">
+            <div class="hud-item">
+                <span class="hud-label">PISO / NIVEL</span>
+                <span id="hud-piso" class="hud-valor">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">PUNTAJE (BITS)</span>
+                <span id="hud-puntaje" class="hud-valor">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">VELOCIDAD CPU</span>
+                <span id="hud-velocidad" class="hud-valor">1.0x</span>
+            </div>
+        </div>
+
+        <div id="banner-hito" class="banner-hito oculto"></div>
+
+        <canvas id="gameCanvas" width="480" height="600"></canvas>
+
+        <div id="pantalla-inicio" class="overlay">
+            <img src="assets/escudo_ipet249.png" alt="Escudo IPET 249" class="escudo-overlay">
+            <h2>TORRE DEL TALLER DE INFORMÁTICA</h2>
+            <p>Escalando desde Hardware Básico hasta Arquitectura de Redes</p>
+            <div class="controles-box">
+                <p><strong>Controles:</strong></p>
+                <p>⬅️ ➡️ o <strong>A / D</strong>: Moverse | <strong>ESPACIO</strong> o ⬆️ / <strong>W</strong>: Saltar</p>
+                <p><em>Tip: ¡Corré rápido antes de saltar para hacer un Super Salto!</em></p>
+            </div>
+            <button id="btn-iniciar" class="btn-principal">COMPILAR Y JUGAR</button>
+        </div>
+
+        <div id="pantalla-gameover" class="overlay oculto">
+            <h2 class="texto-rojo">¡KERNEL PANIC! (CAÍDA DEL SISTEMA)</h2>
+            <p id="resumen-final">Alcanzaste el Piso 0 con 0 bits.</p>
+            <button id="btn-reiniciar" class="btn-principal">REINICIAR SISTEMA</button>
+        </div>
+    </main>
+
+    <footer class="footer-institucional">
+        <p>Adaptación basada en <code>chavi362/Icy-Tower</code> | Ciclo Lectivo 2026</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+  </html>
