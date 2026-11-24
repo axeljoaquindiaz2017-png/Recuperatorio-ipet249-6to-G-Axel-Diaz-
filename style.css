@@ -1,0 +1,193 @@
+:root {
+    --bordo-oscuro: #4A0A12;
+    --bordo-principal: #6B0F1A;
+    --amarillo-institucional: #F4C430;
+    --rojo-acento: #D92B2B;
+    --blanco: #FFFFFF;
+    --fondo-oscuro: #1E0508;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fondo-oscuro);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header-institucional {
+    width: 100%;
+    background-color: var(--bordo-principal);
+    border-bottom: 4px solid var(--amarillo-institucional);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.escudo-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid var(--amarillo-institucional);
+}
+
+.titulo-container h1 {
+    font-size: 1.3rem;
+    color: var(--amarillo-institucional);
+    letter-spacing: 1px;
+}
+
+.titulo-container p {
+    font-size: 0.85rem;
+    color: var(--blanco);
+    opacity: 0.9;
+}
+
+.game-wrapper {
+    position: relative;
+    margin: 20px auto;
+    width: 480px;
+    border: 4px solid var(--amarillo-institucional);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bordo-oscuro);
+    box-shadow: 0 0 25px rgba(217, 43, 43, 0.35);
+}
+
+.hud-panel {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bordo-principal);
+    padding: 10px;
+    border-bottom: 2px solid var(--rojo-acento);
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hud-label {
+    font-size: 0.7rem;
+    color: var(--amarillo-institucional);
+    font-weight: bold;
+}
+
+.hud-valor {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.banner-hito {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--amarillo-institucional);
+    color: var(--bordo-oscuro);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    z-index: 5;
+    border: 2px solid var(--rojo-acento);
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+canvas {
+    display: block;
+    background: linear-gradient(180deg, #2B060B 0%, #4A0A12 100%);
+}
+
+.overlay {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(43, 6, 11, 0.93);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    z-index: 10;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.escudo-overlay {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px solid var(--amarillo-institucional);
+    margin-bottom: 15px;
+}
+
+.overlay h2 {
+    color: var(--amarillo-institucional);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.texto-rojo {
+    color: var(--rojo-acento) !important;
+}
+
+.controles-box {
+    background-color: var(--bordo-principal);
+    border: 1px solid var(--amarillo-institucional);
+    border-radius: 6px;
+    padding: 12px;
+    margin: 18px 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.btn-principal {
+    background-color: var(--rojo-acento);
+    color: var(--blanco);
+    border: 2px solid var(--amarillo-institucional);
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.btn-principal:hover {
+    background-color: var(--amarillo-institucional);
+    color: var(--bordo-oscuro);
+    transform: scale(1.05);
+}
+
+.footer-institucional {
+    margin-top: auto;
+    padding: 12px;
+    font-size: 0.8rem;
+    color: #CCCCCC;
+  }
